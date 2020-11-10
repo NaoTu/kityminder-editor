@@ -526,6 +526,17 @@ div.minder-editor-container {
 .km-note.panel .panel-heading h3 {
   display: inline-block;
 }
+.km-note.panel .panel-heading .show-preview-in-note-editor {
+  padding: 2px;
+  margin-top: -4px;
+  display: inline-block;
+  float: right;
+  margin-right: 10px;
+  outline: none;
+}
+.km-note.panel .panel-heading .show-preview-in-note-editor:hover {
+  cursor: pointer;
+}
 .km-note.panel .panel-heading .close-note-editor {
   width: 15px;
   height: 15px;
@@ -649,6 +660,103 @@ div.minder-editor-container {
   border-top: 1px solid #CCC;
 }
 #previewer-content .highlight {
+  background: yellow;
+  color: red;
+}
+#note-editor-previewer-content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: #f5f5f5;
+  padding: 5px 15px;
+  overflow: auto;
+  word-break: break-all;
+  font-size: 12px;
+  -webkit-user-select: text;
+  color: #333;
+  line-height: 1.8em;
+}
+#note-editor-previewer-content blockquote,
+#note-editor-previewer-content ul,
+#note-editor-previewer-content table,
+#note-editor-previewer-content p,
+#note-editor-previewer-content pre,
+#note-editor-previewer-content hr {
+  margin: 1em 0;
+  cursor: text;
+}
+#note-editor-previewer-content blockquote:first-child:last-child,
+#note-editor-previewer-content ul:first-child:last-child,
+#note-editor-previewer-content table:first-child:last-child,
+#note-editor-previewer-content p:first-child:last-child,
+#note-editor-previewer-content pre:first-child:last-child,
+#note-editor-previewer-content hr:first-child:last-child {
+  margin: 0;
+}
+#note-editor-previewer-content img {
+  max-width: 100%;
+}
+#note-editor-previewer-content a {
+  color: blue;
+}
+#note-editor-previewer-content a:hover {
+  color: red;
+}
+#note-editor-previewer-content blockquote {
+  display: block;
+  border-left: 4px solid #E4AD91;
+  color: #da8e68;
+  padding-left: 10px;
+  font-style: italic;
+  margin-left: 2em;
+}
+#note-editor-previewer-content ul,
+#note-editor-previewer-content ol {
+  padding-left: 3em;
+}
+#note-editor-previewer-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1em 0;
+}
+#note-editor-previewer-content table th,
+#note-editor-previewer-content table td {
+  border: 1px solid #666;
+  padding: 2px 4px;
+}
+#note-editor-previewer-content table th {
+  background: rgba(45, 141, 234, 0.2);
+}
+#note-editor-previewer-content table tr:nth-child(even) td {
+  background: rgba(45, 141, 234, 0.03);
+}
+#note-editor-previewer-content em {
+  color: red;
+}
+#note-editor-previewer-content del {
+  color: #999;
+}
+#note-editor-previewer-content pre {
+  background: rgba(45, 141, 234, 0.1);
+  padding: 5px;
+  border-radius: 5px;
+  word-break: break-all;
+  word-wrap: break-word;
+}
+#note-editor-previewer-content code {
+  background: rgba(45, 141, 234, 0.1);
+  /*         display: inline-block; */
+  padding: 0 5px;
+  border-radius: 3px;
+}
+#note-editor-previewer-content pre code {
+  background: none;
+}
+#note-editor-previewer-content hr {
+  border: none;
+  border-top: 1px solid #CCC;
+}
+#note-editor-previewer-content .highlight {
   background: yellow;
   color: red;
 }
