@@ -113,6 +113,19 @@
                 display: inline-block;
             }
 
+            .show-preview-in-note-editor {
+                padding: 2px;
+                margin-top: -4px;
+                display: inline-block;
+                float: right;
+                margin-right: 10px;
+                outline: none;  // Button is too small. Keeping button-pressed outline is not a good choice.
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+
             .close-note-editor {
                 width: 15px;
                 height: 15px;
@@ -155,6 +168,16 @@
     overflow: auto;
     z-index: 10;
     box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+    word-break: break-all;
+    .gfm-render;
+}
+#note-editor-previewer-content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(245, 245, 245);
+    padding: 5px 15px;
+    overflow: auto;
     word-break: break-all;
     .gfm-render;
 }
