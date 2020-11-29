@@ -9,6 +9,7 @@ angular.module('kityminderEditor')
             replace: true,
 			link: function($scope) {
 				var minder = $scope.minder;
+				var lang = editor.lang.t ;
 				var progresses = [];
 
 				for (var i = 0; i < 10; i++) {
@@ -20,13 +21,14 @@ angular.module('kityminderEditor')
 				$scope.progresses = progresses;
 
 				$scope.getProgressTitle = function(p) {
-					switch(p) {
-						case 0: return '移除进度';
-						case 1: return '未开始';
-						case 9: return '全部完成';
-						default: return '完成' + (p - 1) + '/8';
+					return lang('p'+p,'ui/progress') ;
+					//switch(p) {
+					//	case 0: return lang('p1','ui/progress');
+					//	case 1: return '未开始';
+					//	case 9: return lang('p9','ui/progress');
+					//	default: return '完成' + (p - 1) + '/8';
 
-					}
+					//}
 				}
 			}
 		}
