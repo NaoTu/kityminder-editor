@@ -144,7 +144,8 @@ define(function(require, exports, module) {
             'noteeditor': {
                 'title': '备注',
                 'hint': '支持 GFM 语法书写',
-                'placeholder': '请选择节点编辑备注'
+                'placeholder': '请选择节点编辑备注',
+                'preview': '显示/隐藏预览'
             },
             'dialog': {
                 'image': {

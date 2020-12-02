@@ -144,7 +144,8 @@ define(function(require, exports, module) {
             'noteeditor': {
                 'title': 'Note',
                 'hint': 'Support GFM grammar',
-                'placeholder': 'Please select a node to edit note'
+                'placeholder': 'Please select a node to edit note',
+                'preview': 'Toggle preview'
             },
             'dialog': {
                 'image': {

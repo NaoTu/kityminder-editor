@@ -3,9 +3,13 @@
         <h3 class="panel-title">{{ 'title' | lang: 'ui/noteeditor' }}</h3>
         <span>（<a class="help" href="https://www.zybuluo.com/techird/note/46064" target="_blank">{{ 'hint' | lang: 'ui/noteeditor' }}</a>）</span>
         <i class="close-note-editor glyphicon glyphicon-remove" ng-click="closeNoteEditor()"></i>
+        <button class="btn btn-default show-preview-in-note-editor glyphicon glyphicon-play-circle" 
+                ng-class="{ true: 'active', false: '' }[noteEditorPreviewOpen]" ng-click="toggleNoteEditorPreview()" 
+                title="{{ 'preview' | lang: 'ui/noteeditor' }}"></button>
     </div>
     <div class="panel-body">
-        <div ng-show="noteEnabled"
+        <div ng-show="noteEnabled && noteEditorPreviewOpen" id="note-editor-previewer-content" ng-bind-html="notePreview"></div>
+        <div ng-show="noteEnabled && !noteEditorPreviewOpen"
              ui-codemirror="{ onLoad: codemirrorLoaded }"
              ng-model="noteContent"
              ui-codemirror-opts="{

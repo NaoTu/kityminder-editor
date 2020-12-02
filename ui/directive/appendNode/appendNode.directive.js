@@ -9,11 +9,12 @@ angular.module('kityminderEditor')
             replace: true,
             link: function($scope) {
                 var minder = $scope.minder;
+                var lang = editor.lang.t;
 
                 commandBinder.bind(minder, 'appendchildnode', $scope)
 
                 $scope.execCommand = function(command) {
-                    minder.execCommand(command, '分支主题');
+                    minder.execCommand(command, lang("topic", "runtime/node"));
                     editText();
                 };
 

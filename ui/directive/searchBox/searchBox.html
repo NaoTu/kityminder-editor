@@ -8,7 +8,7 @@
                aria-describedby="basic-addon2"/>
         <span class="input-group-addon search-addon" id="basic-addon2"
               ng-show="showTip"
-              ng-bind="'第 ' + curIndex + ' 条，共 ' + resultNum + ' 条'"></span>
+              ng-bind="'{{ 'result' | lang:'ui/dialog/search' }}' + ' ' + curIndex + ' ' + '{{ 'on' | lang:'ui/dialog/search' }}' + ' ' +resultNum "></span>
     </div>
     <div class="btn-group btn-group-sm prev-and-next-btn" role="group">
         <button type="button" class="btn btn-default" ng-click="doSearch(keyword, 'prev')">

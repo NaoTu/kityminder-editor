@@ -10,6 +10,7 @@ angular.module('kityminderEditor')
             replace: true,
             link: function($scope) {
                 var minder = $scope.minder;
+                var lang = editor.lang.t ;
                 var priorities = [];
 
                 for (var i = 0; i < 10; i++) {
@@ -22,8 +23,8 @@ angular.module('kityminderEditor')
 
 	            $scope.getPriorityTitle = function(p) {
 		            switch(p) {
-			            case 0: return '移除优先级';
-			            default: return '优先级' + p;
+			            case 0: return lang("no priority","ui") ;
+			            default: return lang("priority","ui") +" "+p;
 		            }
 	            }
             }
